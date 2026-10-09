@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-cli-tool"
+version = "0.1.0"
+authors = [
+  { name = "zhangyulin2026", email = "20517965@qq.com" }
+]
+description = "一个最简单的 Python CLI 入门示例"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+dependencies = []
+
+# 安装后会在命令行生成一个同名命令
+[project.scripts]
+my-cli-tool = "my_cli_tool.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
